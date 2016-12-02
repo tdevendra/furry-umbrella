@@ -1,4 +1,3 @@
-ProductID,Sold,Country
 10,2,India
 11,12,US
 11,14,Canada

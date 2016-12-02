@@ -7,14 +7,14 @@ from __future__ import print_function
 
 import re
 import sys
-
+from operator import add
 from pyspark.sql import SparkSession
 
 def perDayProductSales(line):
     """Read line."""
     #print(line)
     parts = re.split(r',', line)
-    return parts[0], parts[1]
+    return int(parts[0]), int(parts[1])
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
@@ -30,7 +30,7 @@ if __name__ == "__main__":
 
     #print(lines.collect())
     #lines = lines[1:]
-    result = lines.map(lambda product: perDayProductSales(product)).groupByKey()
+    result = lines.map(lambda product: perDayProductSales(product)).reduceByKey(add)
     #print("Result")
     print(result.collect())
     spark.stop()
