@@ -1,7 +1,7 @@
 """
-This is an example implementation of Sales Per Day ProductWise.
-Example Usage:
-bin/spark-submit ml/sales.py data/sales_per_day.txt
+This is an example implementation of Region wise Sales Per Product 
+Sample Usage:
+bin/spark-submit ml/regionsales.py data/sales_per_day.txt
 """
 from __future__ import print_function
 
