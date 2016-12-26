@@ -27,6 +27,7 @@ sudo /usr/hdp/2.4.0.0-169/spark-2.0.1-bin-hadoop2.4/bin/spark-submit --master lo
 test is topic name of kafka.
 
 [@sandbox kafka_2.11-0.10.1.0]$ bin/kafka-topics.sh --describe --zookeeper 0.0.0.0:2181 --topic test
+
 Topic:test      PartitionCount:1        ReplicationFactor:1     Configs:
         Topic: test     Partition: 0    Leader: 0       Replicas: 0     Isr: 0
 
