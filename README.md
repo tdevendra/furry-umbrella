@@ -24,4 +24,12 @@ regionsales.py: Region wise product total sales
 
 sudo /usr/hdp/2.4.0.0-169/spark-2.0.1-bin-hadoop2.4/bin/spark-submit --master local[4] --packages org.apache.spark:spark-streaming-kafka-0-8-assembly_2.11:2.0.1,org.apache.spark:spark-streaming-kafka-0-8_2.10:2.0.1 --driver-class-path spark-streaming-kafka-0-8_2.10-2.0.1.jar,spark-streaming-kafka-0-8-assembly_2.11-2.0.1.jar --jars spark-streaming-kafka-0-8_2.10-2.0.1.jar,spark-streaming-kafka-0-8-assembly_2.11-2.0.1.jar --conf "spark.dynamicAllocation.enabled=false" wordcount.py 0.0.0.0:2181 test
 
+test is topic name of kafka.
+
+[@sandbox kafka_2.11-0.10.1.0]$ bin/kafka-topics.sh --describe --zookeeper 0.0.0.0:2181 --topic test
+Topic:test      PartitionCount:1        ReplicationFactor:1     Configs:
+        Topic: test     Partition: 0    Leader: 0       Replicas: 0     Isr: 0
+[@sandbox kafka_2.11-0.10.1.0]$
+
+
 
