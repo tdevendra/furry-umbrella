@@ -34,3 +34,5 @@ sudo /usr/hdp/2.4.0.0-169/spark-2.0.1-bin-hadoop2.4/bin/spark-submit --master lo
 
     [@sandbox kafka_2.11-0.10.1.0]$
 
+    4- Using log file 
+sudo /usr/hdp/2.4.0.0-169/spark-2.0.1-bin-hadoop2.4/bin/spark-submit --master local[4] --py-files ml/apache_access_log.py ml/log_analyzer.py data/apache.access.log
