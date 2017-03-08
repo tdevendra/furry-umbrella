@@ -3,11 +3,6 @@
 
     1- Added Sales example for products
 
-       Execute from dir such as project-git with checkout as below
-
-sudo /usr/hdp/2.4.0.0-169/spark-2.0.1-bin-hadoop2.4/bin/spark-submit --master local[4] project-git/ml/sales.py project-git/data/sales_per_day.txt
-
-
      Output:
      sales.py: Sales per product
 
@@ -21,8 +16,8 @@ sudo /usr/hdp/2.4.0.0-169/spark-2.0.1-bin-hadoop2.4/bin/spark-submit --master lo
     2- Added Sample plotting for sales using matplotlib, to be run using jupyter ipython notebook
 
     3- Running wordcount.py example using kafka
-
-sudo /usr/hdp/2.4.0.0-169/spark-2.0.1-bin-hadoop2.4/bin/spark-submit --master local[4] --packages org.apache.spark:spark-streaming-kafka-0-8-assembly_2.11:2.0.1,org.apache.spark:spark-streaming-kafka-0-8_2.10:2.0.1 --driver-class-path spark-streaming-kafka-0-8_2.10-2.0.1.jar,spark-streaming-kafka-0-8-assembly_2.11-2.0.1.jar --jars spark-streaming-kafka-0-8_2.10-2.0.1.jar,spark-streaming-kafka-0-8-assembly_2.11-2.0.1.jar --conf "spark.dynamicAllocation.enabled=false" wordcount.py 0.0.0.0:2181 test
+    
+    wordcount.py
 
     'test' is topic name of kafka.
 
@@ -38,4 +33,4 @@ sudo /usr/hdp/2.4.0.0-169/spark-2.0.1-bin-hadoop2.4/bin/spark-submit --master lo
 
 4- Log Analyzer with spark 
 
-sudo /usr/hdp/2.4.0.0-169/spark-2.0.1-bin-hadoop2.4/bin/spark-submit --master local[4] --py-files ml/apache_access_log.py ml/log_analyzer.py data/apache.access.log
+ml/log_analyzer.py
